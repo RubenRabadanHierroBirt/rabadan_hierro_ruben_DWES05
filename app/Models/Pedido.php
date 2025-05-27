@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\LineaPedidos;
 
 class Pedido extends Model
 {
@@ -22,6 +23,6 @@ class Pedido extends Model
 
     public function lineas()
     {
-        return $this->hasMany(LineaPedido::class, 'pedido');
+        return $this->hasMany(LineaPedidos::class, 'pedido');
     }
 }
